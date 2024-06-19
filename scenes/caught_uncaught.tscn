@@ -1,0 +1,114 @@
+[gd_scene load_steps=13 format=3 uid="uid://ewivsgulr3xx"]
+
+[ext_resource type="Script" path="res://scripts/CaughtUncaught.gd" id="1_gw7r3"]
+[ext_resource type="Texture2D" uid="uid://di36b8nxqdvl2" path="res://assets/cutscenes/RSE Starter 1.png" id="2_gtfrl"]
+[ext_resource type="Texture2D" uid="uid://clwjf2y0qwd1o" path="res://assets/cutscenes/RSE Starter 3.png" id="3_e06q5"]
+[ext_resource type="Texture2D" uid="uid://cwknhfh3xjvkx" path="res://assets/cutscenes/RSE Starter 4.png" id="4_kam7v"]
+[ext_resource type="Texture2D" uid="uid://kpdtpbqon5x2" path="res://assets/cutscenes/RSE Starter 5.png" id="5_roh2p"]
+[ext_resource type="Texture2D" uid="uid://27b5qixd5xcx" path="res://assets/cutscenes/Gen 3A Explode12.png" id="6_2m44d"]
+[ext_resource type="Texture2D" uid="uid://cidsajiediyv5" path="res://assets/cutscenes/Gen 3A Explode13.png" id="7_1aasp"]
+[ext_resource type="Texture2D" uid="uid://cmv27cro763u4" path="res://assets/cutscenes/Gen 3A Explode14.png" id="8_oywb5"]
+[ext_resource type="Texture2D" uid="uid://7f4s4r5csrwn" path="res://assets/cutscenes/Gen 3A Explode15.png" id="9_au70b"]
+[ext_resource type="Texture2D" uid="uid://c4oudybj1ikl0" path="res://assets/cutscenes/Gen 3A Explode16.png" id="10_k2vwy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yuj82"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_e06q5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kam7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_roh2p")
+}],
+"loop": true,
+"name": &"MovingPokeball",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_kam7v")
+}],
+"loop": false,
+"name": &"StoppedPokeball",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8rhip"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_2m44d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1aasp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_oywb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_au70b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_k2vwy")
+}],
+"loop": false,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="CaughtUncaught" type="Node2D"]
+script = ExtResource("1_gw7r3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(576, 405)
+scale = Vector2(1.6, 1.6875)
+texture = ExtResource("2_gtfrl")
+
+[node name="Pokeball" type="AnimatedSprite2D" parent="CanvasLayer"]
+position = Vector2(575, 313)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_yuj82")
+animation = &"StoppedPokeball"
+
+[node name="Pokemon" type="Node2D" parent="CanvasLayer"]
+position = Vector2(569, 300)
+
+[node name="Effects" type="AnimatedSprite2D" parent="CanvasLayer"]
+position = Vector2(545, 312)
+scale = Vector2(7, 7)
+sprite_frames = SubResource("SpriteFrames_8rhip")
+frame = 4
+frame_progress = 1.0
+
+[node name="SceneChange" type="Timer" parent="CanvasLayer"]
+wait_time = 2.0
+one_shot = true
+
+[node name="TextBackground" type="ColorRect" parent="CanvasLayer"]
+offset_top = 462.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.0784314, 0.0784314, 0.0784314, 0.733333)
+
+[node name="Text" type="Label" parent="CanvasLayer/TextBackground"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 40.0
+offset_right = 335.0
+offset_bottom = 63.0
+scale = Vector2(4, 4)
+text = "Pokemon Caught Successfully"
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 2.0
+one_shot = true
+
+[connection signal="animation_finished" from="CanvasLayer/Effects" to="." method="_on_effects_animation_finished"]
+[connection signal="timeout" from="CanvasLayer/SceneChange" to="." method="_on_scene_change_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

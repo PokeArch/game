@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2aktvtvul7h"]
+
+[ext_resource type="Script" path="res://scripts/InventoryItemBar.gd" id="1_mfipt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kqrhi"]
+bg_color = Color(0.823529, 0.180392, 0.27451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cwj8w"]
+bg_color = Color(0.631373, 1, 0.14902, 1)
+
+[node name="InventoryItemBar" type="ProgressBar"]
+offset_right = 25.0
+offset_bottom = 3.0
+theme_override_styles/background = SubResource("StyleBoxFlat_kqrhi")
+theme_override_styles/fill = SubResource("StyleBoxFlat_cwj8w")
+value = 20.0
+show_percentage = false
+script = ExtResource("1_mfipt")

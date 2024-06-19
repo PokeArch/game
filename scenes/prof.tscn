@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://dy4ilndwo4xr0"]
+
+[ext_resource type="Script" path="res://scripts/prof.gd" id="1_f713m"]
+[ext_resource type="Texture2D" uid="uid://ba74nhmhn5b20" path="res://assets/Character/FRLG Peds2.png" id="1_pedgc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3f76d"]
+atlas = ExtResource("1_pedgc")
+region = Rect2(720, 384, 72, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qix3e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3f76d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_88wmq"]
+radius = 13.6015
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e5dem"]
+radius = 96.0052
+
+[node name="prof" type="CharacterBody2D"]
+y_sort_enabled = true
+script = ExtResource("1_f713m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qix3e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 31)
+shape = SubResource("CircleShape2D_88wmq")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, 17)
+shape = SubResource("CircleShape2D_e5dem")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

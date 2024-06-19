@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkfjubjb1gw4t"]
+
+[ext_resource type="Script" path="res://scripts/text_box.gd" id="1_43rl2"]
+[ext_resource type="Texture2D" uid="uid://uc5inrctymo0" path="res://assets/text_box/DialogueBox.png" id="2_3ei25"]
+[ext_resource type="FontFile" uid="uid://dp5g8lcdwbp1g" path="res://assets/text_box/Pokemon Classic.ttf" id="3_ij3du"]
+
+[node name="text_box" type="MarginContainer"]
+offset_right = 32.0
+offset_bottom = 32.0
+script = ExtResource("1_43rl2")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_3ei25")
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ij3du")
+
+[node name="letter_disp" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="letter_disp" to="." method="_on_letter_disp_timeout"]

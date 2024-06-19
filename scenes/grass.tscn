@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bomck3am4b3dr"]
+
+[ext_resource type="Texture2D" uid="uid://bxdv77cp1tac7" path="res://assets/FRLG Outside A1B.png" id="1_wex0m"]
+[ext_resource type="Script" path="res://scripts/grass.gd" id="2_2ny50"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a78wv"]
+size = Vector2(96, 95)
+
+[node name="Grass" type="Area2D"]
+script = ExtResource("2_2ny50")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+texture = ExtResource("1_wex0m")
+hframes = 8
+vframes = 6
+frame = 27
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0.5)
+shape = SubResource("RectangleShape2D_a78wv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

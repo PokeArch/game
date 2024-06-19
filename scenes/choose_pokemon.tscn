@@ -1,0 +1,367 @@
+[gd_scene load_steps=12 format=3 uid="uid://ctasm3fdxpnkg"]
+
+[ext_resource type="Script" path="res://scripts/ChoosePokemon.gd" id="1_l7bsq"]
+[ext_resource type="Texture2D" uid="uid://yddou7qh3icy" path="res://assets/battle_scenes/BB1 RSE Arena5.png" id="2_23d7f"]
+[ext_resource type="PackedScene" uid="uid://cu6ogfslxp66h" path="res://scenes/inventory_item.tscn" id="3_8wxp2"]
+[ext_resource type="Texture2D" uid="uid://daehujioycap2" path="res://assets/battle_enemies/1 FRLG.png" id="4_h3qpm"]
+[ext_resource type="Texture2D" uid="uid://d17bfy5ctc7fd" path="res://assets/battle_enemies/4 FRLG.png" id="5_1a31l"]
+[ext_resource type="Texture2D" uid="uid://fe2l0t82hc2y" path="res://assets/battle_enemies/25 FRLG.png" id="6_83fy6"]
+[ext_resource type="Texture2D" uid="uid://n5yghq0q3tgg" path="res://assets/battle_enemies/150 FRLG.png" id="7_xsic0"]
+[ext_resource type="PackedScene" uid="uid://b2aktvtvul7h" path="res://scenes/inventory_item_bar.tscn" id="8_8ektj"]
+[ext_resource type="Texture2D" uid="uid://c2f76otbvstqg" path="res://assets/battle_enemies/7 HGSS-2-S.png" id="9_3eb4h"]
+[ext_resource type="Script" path="res://scripts/Pokemons.gd" id="9_b0wbx"]
+[ext_resource type="Texture2D" uid="uid://buxjpplgjukk6" path="res://assets/battle_enemies/97 HGSS.png" id="10_aepdm"]
+
+[node name="ChoosePokemon" type="Node2D"]
+script = ExtResource("1_l7bsq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(576, 323.25)
+scale = Vector2(1.152, 0.873649)
+texture = ExtResource("2_23d7f")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = 104.0
+offset_top = 383.0
+offset_right = 1046.0
+offset_bottom = 561.0
+color = Color(0.137255, 0.137255, 0.137255, 0.47451)
+
+[node name="EncounteredPokemon" type="Node2D" parent="CanvasLayer"]
+position = Vector2(537, 220)
+scale = Vector2(1.1, 1.1)
+
+[node name="InventoryItem" parent="CanvasLayer/EncounteredPokemon" instance=ExtResource("3_8wxp2")]
+position = Vector2(-110, -120)
+scale = Vector2(1.81818, 1.81818)
+
+[node name="Pokemons" type="Node2D" parent="CanvasLayer/EncounteredPokemon"]
+position = Vector2(-60, -80)
+script = ExtResource("9_b0wbx")
+
+[node name="Bulbasaur" type="Sprite2D" parent="CanvasLayer/EncounteredPokemon/Pokemons"]
+position = Vector2(76.3636, 76.3636)
+scale = Vector2(1.45455, 1.45455)
+texture = ExtResource("4_h3qpm")
+
+[node name="Charmander" type="Sprite2D" parent="CanvasLayer/EncounteredPokemon/Pokemons"]
+position = Vector2(87.2727, 81.8182)
+scale = Vector2(1.45455, 1.45455)
+texture = ExtResource("5_1a31l")
+
+[node name="Pikachu" type="Sprite2D" parent="CanvasLayer/EncounteredPokemon/Pokemons"]
+position = Vector2(77.2727, 80.9091)
+scale = Vector2(1.27273, 1.27273)
+texture = ExtResource("6_83fy6")
+
+[node name="MewTwo" type="Sprite2D" parent="CanvasLayer/EncounteredPokemon/Pokemons"]
+position = Vector2(63.6364, 74.5454)
+texture = ExtResource("7_xsic0")
+
+[node name="Squirtel" type="Sprite2D" parent="CanvasLayer/EncounteredPokemon/Pokemons"]
+position = Vector2(78.1818, 84.5454)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("9_3eb4h")
+
+[node name="Hypno" type="Sprite2D" parent="CanvasLayer/EncounteredPokemon/Pokemons"]
+position = Vector2(70.9091, 76.3636)
+scale = Vector2(0.909091, 0.909091)
+texture = ExtResource("10_aepdm")
+
+[node name="FirstPosition" type="Node2D" parent="CanvasLayer"]
+position = Vector2(170, 410)
+scale = Vector2(0.8, 0.8)
+
+[node name="InventoryItem" parent="CanvasLayer/FirstPosition" instance=ExtResource("3_8wxp2")]
+
+[node name="HealthBar" parent="CanvasLayer/FirstPosition" instance=ExtResource("8_8ektj")]
+offset_left = 13.0
+offset_top = 102.0
+offset_right = 115.0
+offset_bottom = 114.0
+
+[node name="Pokemons" type="Node2D" parent="CanvasLayer/FirstPosition"]
+position = Vector2(-60, -80)
+script = ExtResource("9_b0wbx")
+
+[node name="MewTwo" type="Sprite2D" parent="CanvasLayer/FirstPosition/Pokemons"]
+visible = false
+position = Vector2(118, 140)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_xsic0")
+
+[node name="Bulbasaur" type="Sprite2D" parent="CanvasLayer/FirstPosition/Pokemons"]
+visible = false
+position = Vector2(127, 143)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_h3qpm")
+
+[node name="Pikachu" type="Sprite2D" parent="CanvasLayer/FirstPosition/Pokemons"]
+visible = false
+position = Vector2(128, 141)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_83fy6")
+
+[node name="Charmander" type="Sprite2D" parent="CanvasLayer/FirstPosition/Pokemons"]
+position = Vector2(135, 142)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_1a31l")
+
+[node name="Squirtel" type="Sprite2D" parent="CanvasLayer/FirstPosition/Pokemons"]
+position = Vector2(130, 140)
+scale = Vector2(0.68, 0.68)
+texture = ExtResource("9_3eb4h")
+
+[node name="Hypno" type="Sprite2D" parent="CanvasLayer/FirstPosition/Pokemons"]
+position = Vector2(126.25, 133.75)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("10_aepdm")
+
+[node name="FirstButton" type="Button" parent="CanvasLayer/FirstPosition"]
+offset_left = 22.0
+offset_top = 130.0
+offset_right = 127.0
+offset_bottom = 161.0
+scale = Vector2(0.8, 0.8)
+text = "Feed Berries"
+
+[node name="SecondPosition" type="Node2D" parent="CanvasLayer"]
+position = Vector2(345, 410)
+scale = Vector2(0.8, 0.8)
+
+[node name="InventoryItem" parent="CanvasLayer/SecondPosition" instance=ExtResource("3_8wxp2")]
+
+[node name="HealthBar" parent="CanvasLayer/SecondPosition" instance=ExtResource("8_8ektj")]
+offset_left = 14.0
+offset_top = 102.0
+offset_right = 115.0
+offset_bottom = 114.0
+
+[node name="Pokemons" type="Node2D" parent="CanvasLayer/SecondPosition"]
+position = Vector2(-60, -80)
+script = ExtResource("9_b0wbx")
+
+[node name="MewTwo" type="Sprite2D" parent="CanvasLayer/SecondPosition/Pokemons"]
+visible = false
+position = Vector2(118, 140)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_xsic0")
+
+[node name="Bulbasaur" type="Sprite2D" parent="CanvasLayer/SecondPosition/Pokemons"]
+visible = false
+position = Vector2(127, 143)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_h3qpm")
+
+[node name="Pikachu" type="Sprite2D" parent="CanvasLayer/SecondPosition/Pokemons"]
+visible = false
+position = Vector2(128, 141)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_83fy6")
+
+[node name="Charmander" type="Sprite2D" parent="CanvasLayer/SecondPosition/Pokemons"]
+visible = false
+position = Vector2(135, 142)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_1a31l")
+
+[node name="Squirtel" type="Sprite2D" parent="CanvasLayer/SecondPosition/Pokemons"]
+position = Vector2(130, 140)
+scale = Vector2(0.68, 0.68)
+texture = ExtResource("9_3eb4h")
+
+[node name="Hypno" type="Sprite2D" parent="CanvasLayer/SecondPosition/Pokemons"]
+position = Vector2(126.25, 133.75)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("10_aepdm")
+
+[node name="SecondButton" type="Button" parent="CanvasLayer/SecondPosition"]
+offset_left = 22.0
+offset_top = 130.0
+offset_right = 127.0
+offset_bottom = 161.0
+scale = Vector2(0.8, 0.8)
+text = "Feed Berries"
+
+[node name="ThirdPosition" type="Node2D" parent="CanvasLayer"]
+position = Vector2(520, 410)
+scale = Vector2(0.8, 0.8)
+
+[node name="InventoryItem" parent="CanvasLayer/ThirdPosition" instance=ExtResource("3_8wxp2")]
+
+[node name="HealthBar" parent="CanvasLayer/ThirdPosition" instance=ExtResource("8_8ektj")]
+offset_left = 14.0
+offset_top = 102.0
+offset_right = 115.0
+offset_bottom = 114.0
+
+[node name="Pokemons" type="Node2D" parent="CanvasLayer/ThirdPosition"]
+position = Vector2(-60, -80)
+script = ExtResource("9_b0wbx")
+
+[node name="MewTwo" type="Sprite2D" parent="CanvasLayer/ThirdPosition/Pokemons"]
+visible = false
+position = Vector2(118, 140)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_xsic0")
+
+[node name="Bulbasaur" type="Sprite2D" parent="CanvasLayer/ThirdPosition/Pokemons"]
+visible = false
+position = Vector2(127, 143)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_h3qpm")
+
+[node name="Pikachu" type="Sprite2D" parent="CanvasLayer/ThirdPosition/Pokemons"]
+visible = false
+position = Vector2(128, 141)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_83fy6")
+
+[node name="Charmander" type="Sprite2D" parent="CanvasLayer/ThirdPosition/Pokemons"]
+visible = false
+position = Vector2(135, 142)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_1a31l")
+
+[node name="Squirtel" type="Sprite2D" parent="CanvasLayer/ThirdPosition/Pokemons"]
+position = Vector2(130, 140)
+scale = Vector2(0.68, 0.68)
+texture = ExtResource("9_3eb4h")
+
+[node name="Hypno" type="Sprite2D" parent="CanvasLayer/ThirdPosition/Pokemons"]
+position = Vector2(126.25, 133.75)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("10_aepdm")
+
+[node name="ThirdButton" type="Button" parent="CanvasLayer/ThirdPosition"]
+offset_left = 22.0
+offset_top = 130.0
+offset_right = 127.0
+offset_bottom = 161.0
+scale = Vector2(0.8, 0.8)
+text = "Feed Berries"
+
+[node name="FourthPosition" type="Node2D" parent="CanvasLayer"]
+position = Vector2(695, 410)
+scale = Vector2(0.8, 0.8)
+
+[node name="InventoryItem" parent="CanvasLayer/FourthPosition" instance=ExtResource("3_8wxp2")]
+
+[node name="HealthBar" parent="CanvasLayer/FourthPosition" instance=ExtResource("8_8ektj")]
+offset_left = 14.0
+offset_top = 102.0
+offset_right = 115.0
+offset_bottom = 114.0
+
+[node name="Pokemons" type="Node2D" parent="CanvasLayer/FourthPosition"]
+position = Vector2(-60, -80)
+script = ExtResource("9_b0wbx")
+
+[node name="MewTwo" type="Sprite2D" parent="CanvasLayer/FourthPosition/Pokemons"]
+visible = false
+position = Vector2(118, 140)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_xsic0")
+
+[node name="Bulbasaur" type="Sprite2D" parent="CanvasLayer/FourthPosition/Pokemons"]
+visible = false
+position = Vector2(127, 143)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_h3qpm")
+
+[node name="Pikachu" type="Sprite2D" parent="CanvasLayer/FourthPosition/Pokemons"]
+visible = false
+position = Vector2(128, 141)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_83fy6")
+
+[node name="Charmander" type="Sprite2D" parent="CanvasLayer/FourthPosition/Pokemons"]
+visible = false
+position = Vector2(135, 142)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_1a31l")
+
+[node name="Squirtel" type="Sprite2D" parent="CanvasLayer/FourthPosition/Pokemons"]
+position = Vector2(130, 140)
+scale = Vector2(0.68, 0.68)
+texture = ExtResource("9_3eb4h")
+
+[node name="Hypno" type="Sprite2D" parent="CanvasLayer/FourthPosition/Pokemons"]
+position = Vector2(126.25, 133.75)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("10_aepdm")
+
+[node name="FourthButton" type="Button" parent="CanvasLayer/FourthPosition"]
+offset_left = 22.0
+offset_top = 130.0
+offset_right = 127.0
+offset_bottom = 161.0
+scale = Vector2(0.8, 0.8)
+text = "Feed Berries"
+
+[node name="FifthPosition" type="Node2D" parent="CanvasLayer"]
+position = Vector2(870, 410)
+scale = Vector2(0.8, 0.8)
+
+[node name="InventoryItem" parent="CanvasLayer/FifthPosition" instance=ExtResource("3_8wxp2")]
+
+[node name="HealthBar" parent="CanvasLayer/FifthPosition" instance=ExtResource("8_8ektj")]
+offset_left = 14.0
+offset_top = 102.0
+offset_right = 115.0
+offset_bottom = 114.0
+
+[node name="Pokemons" type="Node2D" parent="CanvasLayer/FifthPosition"]
+position = Vector2(-60, -80)
+script = ExtResource("9_b0wbx")
+
+[node name="MewTwo" type="Sprite2D" parent="CanvasLayer/FifthPosition/Pokemons"]
+visible = false
+position = Vector2(118, 140)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_xsic0")
+
+[node name="Bulbasaur" type="Sprite2D" parent="CanvasLayer/FifthPosition/Pokemons"]
+visible = false
+position = Vector2(127, 143)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_h3qpm")
+
+[node name="Pikachu" type="Sprite2D" parent="CanvasLayer/FifthPosition/Pokemons"]
+visible = false
+position = Vector2(128, 141)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_83fy6")
+
+[node name="Charmander" type="Sprite2D" parent="CanvasLayer/FifthPosition/Pokemons"]
+visible = false
+position = Vector2(135, 142)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_1a31l")
+
+[node name="Squirtel" type="Sprite2D" parent="CanvasLayer/FifthPosition/Pokemons"]
+visible = false
+position = Vector2(130, 140)
+scale = Vector2(0.68, 0.68)
+texture = ExtResource("9_3eb4h")
+
+[node name="Hypno" type="Sprite2D" parent="CanvasLayer/FifthPosition/Pokemons"]
+position = Vector2(126.25, 133.75)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("10_aepdm")
+
+[node name="FifthButton" type="Button" parent="CanvasLayer/FifthPosition"]
+offset_left = 22.0
+offset_top = 130.0
+offset_right = 127.0
+offset_bottom = 161.0
+scale = Vector2(0.8, 0.8)
+text = "Feed Berries"
+
+[connection signal="pressed" from="CanvasLayer/FirstPosition/FirstButton" to="." method="_on_first_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/SecondPosition/SecondButton" to="." method="_on_second_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ThirdPosition/ThirdButton" to="." method="_on_third_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/FourthPosition/FourthButton" to="." method="_on_fourth_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/FifthPosition/FifthButton" to="." method="_on_fifth_button_pressed"]

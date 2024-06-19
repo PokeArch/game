@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c61oat5hcigs5"]
+
+[ext_resource type="Script" path="res://scripts/Enterance.gd" id="1_ls8p2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jg1xj"]
+size = Vector2(35, 35.5)
+
+[node name="Enterance" type="Area2D"]
+script = ExtResource("1_ls8p2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.25)
+shape = SubResource("RectangleShape2D_jg1xj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

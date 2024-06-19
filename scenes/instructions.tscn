@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtf0bfybtuj77"]
+
+[ext_resource type="Script" path="res://scripts/instructions.gd" id="1_ai816"]
+[ext_resource type="Texture2D" uid="uid://dddq4ll5en4un" path="res://assets/instruc.png" id="2_4yjjk"]
+
+[node name="Instructions" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ai816")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_4yjjk")
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 2
+offset_left = 728.0
+offset_top = 573.0
+offset_right = 867.0
+offset_bottom = 611.0
+size_flags_vertical = 4
+text = "      Back       "
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

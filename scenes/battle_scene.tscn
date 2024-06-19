@@ -1,0 +1,1748 @@
+[gd_scene load_steps=54 format=3 uid="uid://df32c8vvjpl7x"]
+
+[ext_resource type="Texture2D" uid="uid://djkxfmn8qeive" path="res://assets/battle_scenes/BB1 RSE Grass2.png" id="1_ajhn0"]
+[ext_resource type="Script" path="res://scripts/battle_scene.gd" id="1_g05qn"]
+[ext_resource type="PackedScene" uid="uid://dp8j10srv1pc7" path="res://scenes/health_bar.tscn" id="3_imjsu"]
+[ext_resource type="Texture2D" uid="uid://dmeedcghk5hqb" path="res://assets/battle_scenes/BB2 FRLG GrassF.png" id="4_atpht"]
+[ext_resource type="Script" path="res://scripts/special_move_bar.gd" id="5_34lgd"]
+[ext_resource type="Texture2D" uid="uid://cijgkpdp361oc" path="res://assets/battle_scenes/BB2 FRLG GrassE.png" id="5_t1215"]
+[ext_resource type="Texture2D" uid="uid://du50drpg5mkc2" path="res://assets/battle_scenes/fainted_rect.png" id="7_4lb2b"]
+[ext_resource type="Texture2D" uid="uid://eisww2jndewm" path="res://assets/cutscenes/FRLG Trainer Backs 01.png" id="8_gnmd1"]
+[ext_resource type="Texture2D" uid="uid://cklc3ewu647uj" path="res://assets/cutscenes/FRLG Trainer Backs 02.png" id="9_v50bf"]
+[ext_resource type="Texture2D" uid="uid://bwxoso20ab4ap" path="res://assets/cutscenes/FRLG Trainer Backs 03.png" id="10_dux2v"]
+[ext_resource type="Texture2D" uid="uid://cv4213g04kiwq" path="res://assets/cutscenes/FRLG Trainer Backs 04.png" id="11_kkoet"]
+[ext_resource type="Texture2D" uid="uid://e4g67ade13tj" path="res://assets/cutscenes/FRLG Trainer Backs 05.png" id="12_tq72c"]
+[ext_resource type="Texture2D" uid="uid://cay0o7osygbxn" path="res://assets/cutscenes/Gen3 Pinball Pokeballs 0.png" id="13_pkxqp"]
+[ext_resource type="Texture2D" uid="uid://bemked4nl5dar" path="res://assets/cutscenes/Gen3 Pinball Pokeballs 1.png" id="14_4kna2"]
+[ext_resource type="Texture2D" uid="uid://cehgrm058ckq8" path="res://assets/cutscenes/Gen3 Pinball Pokeballs 2.png" id="15_rjmbs"]
+[ext_resource type="Texture2D" uid="uid://cgo3yvd8wqtp7" path="res://assets/cutscenes/Gen3 Pinball Pokeballs 3.png" id="16_7xlu6"]
+[ext_resource type="Texture2D" uid="uid://bsrl823hitpih" path="res://assets/cutscenes/Gen3 Pinball Pokeballs 4.png" id="17_il7t0"]
+[ext_resource type="Texture2D" uid="uid://dk5pc2yot2rg2" path="res://assets/cutscenes/Gen3 Pinball Pokeballs 5.png" id="18_nj626"]
+[ext_resource type="Texture2D" uid="uid://nhgreegrmau4" path="res://assets/cutscenes/Gen3 Pinball Pokeballs 6.png" id="19_w4m2s"]
+[ext_resource type="Texture2D" uid="uid://7j4y5qhdb8gl" path="res://assets/cutscenes/Gen3 Pinball Pokeballs 7.png" id="20_gxeew"]
+[ext_resource type="Texture2D" uid="uid://c40e20r0h8x0w" path="res://assets/cutscenes/Gen3 Pinball Pokeballs 8.png" id="21_d61tx"]
+[ext_resource type="Texture2D" uid="uid://b5rvxma4uwlju" path="res://assets/cutscenes/Gen3 Pinball Pokeballs 9.png" id="22_vuwtu"]
+[ext_resource type="Texture2D" uid="uid://dmyn4j6fc3p8h" path="res://assets/cutscenes/Gen3 Pinball Pokeballs 10.png" id="23_qmip1"]
+[ext_resource type="Texture2D" uid="uid://cwqau6lm7w1k8" path="res://assets/cutscenes/Gen3 Pinball Pokeballs 11.png" id="24_88r8m"]
+[ext_resource type="Texture2D" uid="uid://c3arnpnu283qt" path="res://assets/cutscenes/Gen3 Pinball Pokeballs 12.png" id="25_2pyf2"]
+[ext_resource type="Texture2D" uid="uid://dux44jj0f345o" path="res://assets/cutscenes/Gen3 Pinball Pokeballs 13.png" id="26_bxg4t"]
+[ext_resource type="Texture2D" uid="uid://wiiv1yg3chf4" path="res://assets/cutscenes/Gen3 Pinball Pokeballs 14.png" id="27_tyu7i"]
+[ext_resource type="Texture2D" uid="uid://csbuvdql0jxx1" path="res://assets/cutscenes/Gen3 Pinball Pokeballs 15.png" id="28_iku8f"]
+[ext_resource type="Texture2D" uid="uid://bgfpo2yr1opov" path="res://assets/cutscenes/Gen3 Pinball Pokeballs 16.png" id="29_u8f6w"]
+[ext_resource type="Texture2D" uid="uid://dcc23rdh6oayw" path="res://assets/cutscenes/Gen3 Pinball Pokeballs 17.png" id="30_6i3pm"]
+[ext_resource type="Texture2D" uid="uid://evk0qpabcij8" path="res://assets/cutscenes/Gen3 Pinball Pokeballs 136.png" id="31_u3vpa"]
+[ext_resource type="Texture2D" uid="uid://bf3dyo6fhpx6r" path="res://assets/cutscenes/Gen3 Pinball Pokeballs 137.png" id="32_fhk4a"]
+[ext_resource type="Texture2D" uid="uid://b1ffxt0y8cxbh" path="res://assets/cutscenes/Gen3 Pinball Pokeballs 138.png" id="33_xpnag"]
+[ext_resource type="Texture2D" uid="uid://nafiv3v8n8hh" path="res://assets/cutscenes/Gen3 Pinball Pokeballs 139.png" id="34_cilmt"]
+[ext_resource type="Texture2D" uid="uid://kcie3ioewwib" path="res://assets/cutscenes/Gen3 Pinball Pokeballs 140.png" id="35_mhjui"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3l3hp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_gnmd1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_v50bf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_dux2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_kkoet")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_tq72c")
+}],
+"loop": false,
+"name": &"throw",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_er7hc"]
+bg_color = Color(0.631373, 0.172549, 0.192157, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.976471, 0.976471, 0.976471, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iik0f"]
+bg_color = Color(0.0392157, 0.168627, 0.254902, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.505882, 0.505882, 0.505882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kwi0f"]
+bg_color = Color(0.0431373, 0.678431, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.996078, 0.996078, 0.996078, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_psp4k"]
+bg_color = Color(0.427451, 0.427451, 0.427451, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t57w0"]
+bg_color = Color(0.968627, 0.917647, 0.184314, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.878431, 0.882353, 0.972549, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t1j8c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_rjmbs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7xlu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_il7t0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_nj626")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_w4m2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_gxeew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_d61tx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_vuwtu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_qmip1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_88r8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_2pyf2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_bxg4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_tyu7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_iku8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_u8f6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_6i3pm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4kna2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_pkxqp")
+}],
+"loop": true,
+"name": &"thrown",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_df102"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_u3vpa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_fhk4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_xpnag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_cilmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_mhjui")
+}],
+"loop": false,
+"name": &"Flash",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_3sxeg"]
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/ColorRect3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 323)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/EnemySpawn:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(809, 173)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/FriendlyPokemonSpawn:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(366, 365)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/friendly_grass:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(334, 369)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/enemy_grass:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(844, 370)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/enemy_health_bar:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Pokemons_health:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/SpecialMoveBar:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CanvasLayer/bite:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CanvasLayer/sword:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("CanvasLayer/spike:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CanvasLayer/spl:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("CanvasLayer/Bag:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("CanvasLayer/back:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("CanvasLayer/fainted_pokemon:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("CanvasLayer/ash_throw:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_682gx"]
+resource_name = "battle_cutscene"
+length = 4.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-8, -355)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/ColorRect3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-8, 323), Vector2(-8, 650)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/EnemySpawn:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.5, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-150, 173), Vector2(809, 173)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/FriendlyPokemonSpawn:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2.5, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1300, 365), Vector2(366, 365)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/friendly_grass:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2.5, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1300, 369), Vector2(334, 369)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/enemy_grass:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2.5, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-150, 370), Vector2(844, 370)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/enemy_health_bar:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Pokemons_health:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/SpecialMoveBar:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CanvasLayer/bite:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CanvasLayer/sword:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("CanvasLayer/spike:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CanvasLayer/spl:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("CanvasLayer/back:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("CanvasLayer/Bag:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("CanvasLayer/fainted_pokemon:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("CanvasLayer/ash_throw:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4i6qw"]
+_data = {
+"RESET": SubResource("Animation_3sxeg"),
+"battle_cutscene": SubResource("Animation_682gx")
+}
+
+[sub_resource type="Animation" id="Animation_dihm0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/bite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/sword:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/spike:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/spl:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/back:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/Bag:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/EnemySpawn:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(809, 800)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/FriendlyPokemonSpawn:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(366, 700)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/fainted_pokemon:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CanvasLayer/EnemySpawn:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jki5u"]
+resource_name = "enemy_faint"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/bite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/sword:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/spike:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/spl:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/back:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/Bag:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/EnemySpawn:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.6, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(809, 173), Vector2(809, 450)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/fainted_pokemon:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/EnemySpawn:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.6, 1.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_l8tu8"]
+resource_name = "friendly_faint"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/bite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/sword:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/spike:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/spl:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/back:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/Bag:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/FriendlyPokemonSpawn:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(366, 365), Vector2(366, 700)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s0jfy"]
+_data = {
+"RESET": SubResource("Animation_dihm0"),
+"enemy_faint": SubResource("Animation_jki5u"),
+"friendly_faint": SubResource("Animation_l8tu8")
+}
+
+[sub_resource type="Animation" id="Animation_mgv4a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ash_throw:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(359, 399)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/ash_throw:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/poke_throw:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(460, 323)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/poke_throw:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/EnemySpawn:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/ash_throw:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/FriendlyPokemonSpawn:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(366, 650)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/poke_throw:animation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"thrown"]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/poke_throw:frame")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CanvasLayer/poke_throw:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CanvasLayer/pokeballOpen:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("CanvasLayer/pokeballOpen:animation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Flash"]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CanvasLayer/pokeballOpen:frame")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("CanvasLayer/pokeballOpen:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(685, 162)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("CanvasLayer/pokeballOpen:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("CanvasLayer/pokeballOpen:scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.26808, 1.05645)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("CanvasLayer/ColorRect4:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("CanvasLayer/ColorRect4:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("CanvasLayer/bite:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("CanvasLayer/sword:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("CanvasLayer/spike:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("CanvasLayer/spl:visible")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_dhvtx"]
+resource_name = "catch"
+length = 5.4
+step = 0.025
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ash_throw:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-100, 404), Vector2(356, 403)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/ash_throw:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(-0.2, 3, 3.3, 3.5, 3.8, 4.225),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/poke_throw:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3.6, 4, 4.325, 4.65, 5, 5.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(460, 323), Vector2(563, 190), Vector2(696, 70), Vector2(874, 138), Vector2(918, 197), Vector2(937, 244)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/poke_throw:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/EnemySpawn:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 4.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/ash_throw:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/FriendlyPokemonSpawn:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(366, 365), Vector2(366, 650)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/poke_throw:animation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(3.6),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"thrown"]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/poke_throw:frame")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(3.6, 3.7, 3.8, 3.9, 4, 4.05, 4.1, 4.15, 4.2, 4.25, 4.325, 4.35, 4.375, 4.4, 4.425, 4.45, 4.475, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CanvasLayer/poke_throw:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(3.675, 4.475, 4.875, 5.2, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.12225, 2.01935, 2.01935, 2.01935]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CanvasLayer/pokeballOpen:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 4.475),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("CanvasLayer/pokeballOpen:animation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(4.475),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Flash"]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CanvasLayer/pokeballOpen:frame")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(4.475, 4.575, 4.7, 4.875, 5.05, 5.425),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 2, 3, 3]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("CanvasLayer/pokeballOpen:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(4.475, 4.5, 4.55, 4.7, 5, 5.05, 5.35),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(734, 161), Vector2(714, 100), Vector2(716, 112), Vector2(768, 141), Vector2(806, 190), Vector2(807, 181), Vector2(821, 195)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("CanvasLayer/pokeballOpen:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(3.875, 4.475, 4.5, 4.7, 5, 5.05, 5.35),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.12225, 1.79594, 1.79594, 1.79594, 2.02109]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("CanvasLayer/pokeballOpen:scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(4.475, 4.5, 4.55, 4.7, 5, 5.05, 5.35),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1.26808, 1.05645), Vector2(1.26808, 1.05645), Vector2(1.26808, 1.05645), Vector2(1.26808, 1.05645), Vector2(1.26808, 1.05645), Vector2(1.26808, 1.05645), Vector2(1.37112, 1.17637)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("CanvasLayer/ColorRect4:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 4.95),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("CanvasLayer/ColorRect4:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(4.95, 5.225),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("CanvasLayer/bite:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("CanvasLayer/sword:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("CanvasLayer/spike:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("CanvasLayer/spl:visible")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bevjp"]
+_data = {
+"RESET": SubResource("Animation_mgv4a"),
+"catch": SubResource("Animation_dhvtx")
+}
+
+[node name="battle_scene" type="Node2D"]
+script = ExtResource("1_g05qn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+show_behind_parent = true
+z_index = -1
+y_sort_enabled = true
+position = Vector2(575.75, 322)
+scale = Vector2(1.1525, 0.875676)
+texture = ExtResource("1_ajhn0")
+
+[node name="friendly_grass" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(334, 369)
+texture = ExtResource("4_atpht")
+
+[node name="enemy_grass" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(844, 370)
+texture = ExtResource("5_t1215")
+
+[node name="ash_throw" type="AnimatedSprite2D" parent="CanvasLayer"]
+position = Vector2(359, 399)
+sprite_frames = SubResource("SpriteFrames_3l3hp")
+animation = &"throw"
+
+[node name="EnemySpawn" type="Node2D" parent="CanvasLayer"]
+top_level = true
+position = Vector2(809, 800)
+
+[node name="FriendlyPokemonSpawn" type="Node2D" parent="CanvasLayer"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(366, 650)
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+show_behind_parent = true
+z_index = 3
+offset_top = 475.0
+offset_right = 1158.0
+offset_bottom = 647.0
+color = Color(0.141176, 0.141176, 0.141176, 0.639216)
+
+[node name="enemy_health_bar" parent="CanvasLayer" instance=ExtResource("3_imjsu")]
+visible = false
+offset_left = 45.0
+offset_top = 12.0
+offset_right = 1108.0
+offset_bottom = 52.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_er7hc")
+
+[node name="fainted_pokemon" type="Sprite2D" parent="CanvasLayer"]
+z_index = 2
+position = Vector2(817.5, 392.5)
+scale = Vector2(1.25221, 0.755869)
+texture = ExtResource("7_4lb2b")
+
+[node name="Pokemons_health" parent="CanvasLayer" instance=ExtResource("3_imjsu")]
+visible = false
+offset_left = 49.0
+offset_top = 70.0
+offset_right = 319.0
+offset_bottom = 100.0
+theme_override_styles/background = SubResource("StyleBoxFlat_iik0f")
+theme_override_styles/fill = SubResource("StyleBoxFlat_kwi0f")
+rounded = false
+
+[node name="bite" type="Button" parent="CanvasLayer"]
+visible = false
+z_index = 4
+offset_left = 32.0
+offset_top = 492.0
+offset_right = 197.0
+offset_bottom = 556.0
+focus_neighbor_left = NodePath("../spl")
+focus_neighbor_top = NodePath("../back")
+focus_neighbor_right = NodePath("../spl")
+focus_neighbor_bottom = NodePath("../spike")
+focus_next = NodePath("../spike")
+focus_previous = NodePath("../sword")
+text = "Bite
+"
+
+[node name="sword" type="Button" parent="CanvasLayer"]
+visible = false
+z_index = 4
+offset_left = 222.0
+offset_top = 564.0
+offset_right = 387.0
+offset_bottom = 628.0
+focus_neighbor_left = NodePath("../spike")
+focus_neighbor_top = NodePath("../spl")
+focus_neighbor_right = NodePath("../Bag")
+focus_neighbor_bottom = NodePath("../spl")
+focus_next = NodePath("../bite")
+focus_previous = NodePath("../bite")
+text = "Poke"
+
+[node name="spike" type="Button" parent="CanvasLayer"]
+visible = false
+z_index = 4
+offset_left = 31.0
+offset_top = 564.0
+offset_right = 196.0
+offset_bottom = 628.0
+focus_neighbor_left = NodePath("../back")
+focus_neighbor_top = NodePath("../bite")
+focus_neighbor_right = NodePath("../sword")
+focus_neighbor_bottom = NodePath("../bite")
+focus_next = NodePath("../spl")
+focus_previous = NodePath("../back")
+text = "Spike
+"
+
+[node name="spl" type="Button" parent="CanvasLayer"]
+visible = false
+z_index = 4
+offset_left = 221.0
+offset_top = 494.0
+offset_right = 386.0
+offset_bottom = 558.0
+focus_neighbor_left = NodePath("../bite")
+focus_neighbor_top = NodePath("../back")
+focus_neighbor_right = NodePath("../Bag")
+focus_neighbor_bottom = NodePath("../sword")
+focus_next = NodePath("../spike")
+focus_previous = NodePath("../spike")
+
+[node name="back" type="Button" parent="CanvasLayer"]
+visible = false
+z_index = 4
+offset_left = 969.0
+offset_top = 554.0
+offset_right = 1128.0
+offset_bottom = 617.0
+focus_neighbor_left = NodePath("../Bag")
+focus_neighbor_top = NodePath("../bite")
+focus_neighbor_right = NodePath("../Bag")
+focus_neighbor_bottom = NodePath("../spl")
+focus_next = NodePath("../spike")
+focus_previous = NodePath("../spl")
+text = "Back"
+
+[node name="SpecialMoveBar" parent="CanvasLayer" instance=ExtResource("3_imjsu")]
+z_index = 2
+offset_left = 700.0
+offset_top = 405.0
+offset_right = 1073.0
+offset_bottom = 449.0
+theme_override_styles/background = SubResource("StyleBoxFlat_psp4k")
+theme_override_styles/fill = SubResource("StyleBoxFlat_t57w0")
+value = 0.0
+script = ExtResource("5_34lgd")
+
+[node name="Bag" type="Button" parent="CanvasLayer"]
+visible = false
+z_index = 4
+offset_left = 792.0
+offset_top = 555.0
+offset_right = 950.0
+offset_bottom = 618.0
+focus_neighbor_left = NodePath("../spl")
+focus_neighbor_top = NodePath("../bite")
+focus_neighbor_right = NodePath("../back")
+focus_neighbor_bottom = NodePath("../sword")
+text = "Bag"
+
+[node name="ColorRect3" type="ColorRect" parent="CanvasLayer"]
+top_level = true
+z_index = 4
+offset_left = 1.0
+offset_top = 323.0
+offset_right = 1174.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
+top_level = true
+z_index = 4
+offset_right = 1173.0
+offset_bottom = 347.0
+color = Color(0, 0, 0, 1)
+
+[node name="fainted_text" type="Label" parent="CanvasLayer"]
+offset_left = 190.0
+offset_top = 480.0
+offset_right = 1013.0
+offset_bottom = 645.0
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="poke_throw" type="AnimatedSprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(460, 323)
+scale = Vector2(0.515152, 0.530303)
+sprite_frames = SubResource("SpriteFrames_t1j8c")
+animation = &"thrown"
+
+[node name="pokeballOpen" type="AnimatedSprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(685, 162)
+scale = Vector2(1.26808, 1.05645)
+sprite_frames = SubResource("SpriteFrames_df102")
+animation = &"Flash"
+frame = 3
+
+[node name="ColorRect4" type="ColorRect" parent="CanvasLayer"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+z_index = 3
+offset_top = -2.0
+offset_right = 1155.0
+offset_bottom = 647.0
+color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+
+[node name="FriendlyMove" type="Timer" parent="."]
+process_callback = 0
+wait_time = 3.0
+autostart = true
+
+[node name="EnemyMove" type="Timer" parent="."]
+process_callback = 0
+wait_time = 2.5
+
+[node name="battlescene_start" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4i6qw")
+}
+autoplay = "battle_cutscene"
+
+[node name="fainted" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_s0jfy")
+}
+
+[node name="friendly_fainted" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_s0jfy")
+}
+
+[node name="catch" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_bevjp")
+}
+
+[connection signal="pressed" from="CanvasLayer/bite" to="." method="_on_bite_pressed"]
+[connection signal="pressed" from="CanvasLayer/sword" to="." method="_on_sword_pressed"]
+[connection signal="pressed" from="CanvasLayer/spike" to="." method="_on_spike_pressed"]
+[connection signal="pressed" from="CanvasLayer/spl" to="." method="_on_spl_pressed"]
+[connection signal="pressed" from="CanvasLayer/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="CanvasLayer/Bag" to="." method="_on_bag_pressed"]
+[connection signal="timeout" from="FriendlyMove" to="." method="_on_friendly_move_timeout"]
+[connection signal="timeout" from="EnemyMove" to="." method="_on_enemy_move_timeout"]
+[connection signal="animation_finished" from="battlescene_start" to="." method="_on_battlescene_start_animation_finished"]
+[connection signal="animation_finished" from="fainted" to="." method="_on_fainted_animation_finished"]
+[connection signal="animation_finished" from="friendly_fainted" to="." method="_on_friendly_fainted_animation_finished"]
+[connection signal="animation_finished" from="catch" to="." method="_on_catch_animation_finished"]
