@@ -53,7 +53,7 @@ func handle_spawn():
 		$CanvasLayer/spl.text = "Wrap"
 	elif friendly_temp.PokemonName == "Charmander":
 		$CanvasLayer/spl.text = "Fire"
-	elif friendly_temp.PokemonName == "MewTwo":
+	elif friendly_temp.PokemonName == "Mewtwo":
 		$CanvasLayer/spl.text = "Psychic"
 	elif friendly_temp.PokemonName == "Pikachu":
 		$CanvasLayer/spl.text = "ThunderBolt"

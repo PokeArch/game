@@ -261,7 +261,7 @@ animations = [{
 "texture": ExtResource("22_upvra")
 }],
 "loop": false,
-"name": &"MewTwo",
+"name": &"Mewtwo",
 "speed": 7.0
 }, {
 "frames": [{
@@ -485,7 +485,7 @@ animations = [{
 "texture": ExtResource("22_upvra")
 }],
 "loop": false,
-"name": &"MewTwo",
+"name": &"Mewtwo",
 "speed": 7.0
 }, {
 "frames": [{

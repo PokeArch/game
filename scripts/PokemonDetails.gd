@@ -9,7 +9,7 @@ Type: Electric
 Description: Pikachu is a small, yellow, mouse-like Pokémon known for its ability to generate electricity. 
 "
 
-var MewTwo = "Name : MewTwo
+var Mewtwo = "Name : Mewtwo
 Special Attack : Jaadu
 Type: Psychic
 
@@ -37,8 +37,8 @@ func _ready():
 			self.text = Charmander
 		elif showPokemon == "Pikachu":
 			self.text = Pikachu
-		elif showPokemon == "MewTwo":
-			self.text = MewTwo
+		elif showPokemon == "Mewtwo":
+			self.text = Mewtwo
 		else:
 			self.text = ""
 func _process(delta):

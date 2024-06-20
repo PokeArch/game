@@ -1,16 +1,18 @@
 extends Node2D
 
+var name_callback = JavaScriptBridge.create_callback(render)
 
 func _ready():
+	Game.externalator.addGodotFunction('renderName',name_callback)
+	await JavaScriptBridge.eval("window.getNames()")
+
+func render(arch_id):
 	var vbox_container = $VBoxContainer
-	
-	# Loop through all arch_ids and create buttons
-	for arch_id in Game.arch_ids:
-		var button = Button.new()
-		button.text = arch_id
-		button.name = arch_id 
-		vbox_container.add_child(button) 
-		button.pressed.connect(_on_button_pressed.bind(button))
+	var button = Button.new()
+	button.text = arch_id[0]
+	button.name = arch_id[0] 
+	vbox_container.add_child(button) 
+	button.pressed.connect(_on_button_pressed.bind(button))
 
 
 func _process(delta):
@@ -19,6 +21,7 @@ func _process(delta):
 		tween.tween_property( self , "visible" , false , 0.3)
 
 func _on_button_pressed(button):
+	await JavaScriptBridge.eval("window.register('" + button.name + "')")
 	Game.selected_arch_id = button.name
 	print("Selected Arch ID: " + Game.selected_arch_id)
 

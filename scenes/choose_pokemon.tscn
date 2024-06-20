@@ -56,7 +56,7 @@ position = Vector2(77.2727, 80.9091)
 scale = Vector2(1.27273, 1.27273)
 texture = ExtResource("6_83fy6")
 
-[node name="MewTwo" type="Sprite2D" parent="CanvasLayer/EncounteredPokemon/Pokemons"]
+[node name="Mewtwo" type="Sprite2D" parent="CanvasLayer/EncounteredPokemon/Pokemons"]
 position = Vector2(63.6364, 74.5454)
 texture = ExtResource("7_xsic0")
 
@@ -86,7 +86,7 @@ offset_bottom = 114.0
 position = Vector2(-60, -80)
 script = ExtResource("9_b0wbx")
 
-[node name="MewTwo" type="Sprite2D" parent="CanvasLayer/FirstPosition/Pokemons"]
+[node name="Mewtwo" type="Sprite2D" parent="CanvasLayer/FirstPosition/Pokemons"]
 visible = false
 position = Vector2(118, 140)
 scale = Vector2(0.4, 0.4)
@@ -143,7 +143,7 @@ offset_bottom = 114.0
 position = Vector2(-60, -80)
 script = ExtResource("9_b0wbx")
 
-[node name="MewTwo" type="Sprite2D" parent="CanvasLayer/SecondPosition/Pokemons"]
+[node name="Mewtwo" type="Sprite2D" parent="CanvasLayer/SecondPosition/Pokemons"]
 visible = false
 position = Vector2(118, 140)
 scale = Vector2(0.4, 0.4)
@@ -201,7 +201,7 @@ offset_bottom = 114.0
 position = Vector2(-60, -80)
 script = ExtResource("9_b0wbx")
 
-[node name="MewTwo" type="Sprite2D" parent="CanvasLayer/ThirdPosition/Pokemons"]
+[node name="Mewtwo" type="Sprite2D" parent="CanvasLayer/ThirdPosition/Pokemons"]
 visible = false
 position = Vector2(118, 140)
 scale = Vector2(0.4, 0.4)
@@ -259,7 +259,7 @@ offset_bottom = 114.0
 position = Vector2(-60, -80)
 script = ExtResource("9_b0wbx")
 
-[node name="MewTwo" type="Sprite2D" parent="CanvasLayer/FourthPosition/Pokemons"]
+[node name="Mewtwo" type="Sprite2D" parent="CanvasLayer/FourthPosition/Pokemons"]
 visible = false
 position = Vector2(118, 140)
 scale = Vector2(0.4, 0.4)
@@ -317,7 +317,7 @@ offset_bottom = 114.0
 position = Vector2(-60, -80)
 script = ExtResource("9_b0wbx")
 
-[node name="MewTwo" type="Sprite2D" parent="CanvasLayer/FifthPosition/Pokemons"]
+[node name="Mewtwo" type="Sprite2D" parent="CanvasLayer/FifthPosition/Pokemons"]
 visible = false
 position = Vector2(118, 140)
 scale = Vector2(0.4, 0.4)

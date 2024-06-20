@@ -26,6 +26,7 @@ func _on_close_menu_pressed():
 
 func _on_challenge_player_pressed():
 	Game.ArchIdForChallenge = ArchID.text
+	await JavaScriptBridge.eval("window.battle('" + ArchID.text + "')")
 	print(ArchID.text)
 	print(Game.ArchIdForChallenge)
 	

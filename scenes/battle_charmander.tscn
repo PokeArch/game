@@ -248,7 +248,7 @@ animations = [{
 "texture": ExtResource("18_5jpj3")
 }],
 "loop": false,
-"name": &"MewTwo",
+"name": &"Mewtwo",
 "speed": 7.0
 }, {
 "frames": [{
@@ -434,7 +434,7 @@ animations = [{
 "texture": ExtResource("18_5jpj3")
 }],
 "loop": false,
-"name": &"MewTwo",
+"name": &"Mewtwo",
 "speed": 7.0
 }, {
 "frames": [{

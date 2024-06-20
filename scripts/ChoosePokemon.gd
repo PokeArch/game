@@ -103,28 +103,36 @@ func handleInfo():
 func _on_first_button_pressed():
 	if not Game.player_pokemon[pokemon_keys[0]]["health"] <= 0:
 		Game.choose_pokemon(pokemon_keys[0])
+		Game.chosen_index = Game.player_pokemon[pokemon_keys[0]]["index"]
 		get_tree().change_scene_to_file("res://scenes/battle_scene.tscn")
 
 
 func _on_second_button_pressed():
 	if not Game.player_pokemon[pokemon_keys[1]]["health"] <= 0:
 		Game.choose_pokemon(pokemon_keys[1])
+		Game.chosen_index = Game.player_pokemon[pokemon_keys[1]]["index"]		
 		get_tree().change_scene_to_file("res://scenes/battle_scene.tscn")
 
 
 func _on_third_button_pressed():
 	if not Game.player_pokemon[pokemon_keys[2]]["health"] <= 0:
 		Game.choose_pokemon(pokemon_keys[2])
+		Game.chosen_index = Game.player_pokemon[pokemon_keys[2]]["index"]
+		
 		get_tree().change_scene_to_file("res://scenes/battle_scene.tscn")
 
 
 func _on_fourth_button_pressed():
 	if not Game.player_pokemon[pokemon_keys[3]]["health"] <= 0:
 		Game.choose_pokemon(pokemon_keys[3])
+		Game.chosen_index = Game.player_pokemon[pokemon_keys[3]]["index"]
+		
 		get_tree().change_scene_to_file("res://scenes/battle_scene.tscn")
 
 
 func _on_fifth_button_pressed():
 	if not Game.player_pokemon[pokemon_keys[4]]["health"] <= 0:
 		Game.choose_pokemon(pokemon_keys[4])
+		Game.chosen_index = Game.player_pokemon[pokemon_keys[4]]["index"]
+		
 		get_tree().change_scene_to_file("res://scenes/battle_scene.tscn")

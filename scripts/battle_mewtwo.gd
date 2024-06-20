@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var PokemonName  = "MewTwo"
+var PokemonName  = "Mewtwo"
 
 var health = 100
 var enemy : bool
@@ -20,7 +20,7 @@ var spl = null
 var enemySplAttack = null
 
 func _ready():
-	PokemonName = "MewTwo"
+	PokemonName = "Mewtwo"
 	spl = null
 	enemySplAttack = null
 	enemyattacks.visible = false

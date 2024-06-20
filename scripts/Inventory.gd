@@ -2,7 +2,7 @@ extends Node2D
 
 var Pikachu = "Name: Pikachu\nSpecial Attack: Thunderbolt\nType: Electric\n\nDescription: Pikachu is a small, yellow, mouse-like Pokémon known for its ability to generate electricity."
 
-var MewTwo = "Name: MewTwo\nSpecial Attack: Jaadu\nType: Psychic\n\nDescription: Mewtwo is a legendary Pokémon created through genetic manipulation. It is known for its immense psychic power."
+var Mewtwo = "Name: Mewtwo\nSpecial Attack: Jaadu\nType: Psychic\n\nDescription: Mewtwo is a legendary Pokémon created through genetic manipulation. It is known for its immense psychic power."
 
 var Bulbasaur = "Name: Bulbasaur\nSpecial Attack: Tail Whip\nType: Grass/Poison\n\nDescription: Bulbasaur is a small, quadruped Pokémon with a plant bulb on its back. As it evolves, the bulb blossoms into a large flower."
 
@@ -73,9 +73,10 @@ func _ready():
 
 func _process(delta):
 	updateHealth()
-	
+	if Game.pokemon_added:
+		Game.pokemon_added = false
+		handleInventory()
 	#pokemon_keys = Game.player_pokemon.keys()
-	#handleInventory()
 	if Game.player_berries > 0:
 		BerryCount.text = "Berries : " + str(Game.player_berries)
 	else:
@@ -117,8 +118,8 @@ func matchPokemon(pokemon_name):
 	match pokemon_name:
 		"Pikachu":
 			return Pikachu
-		"MewTwo":
-			return MewTwo
+		"Mewtwo":
+			return Mewtwo
 		"Bulbasaur":
 			return Bulbasaur
 		"Charmander":
@@ -193,9 +194,10 @@ func _on_trade_pokemons_pressed():
 	tween.tween_property(tradeMenu , "visible", true , 0.3)
 	
 func _on_button_pressed(button):
+	await JavaScriptBridge.eval("window.setDefault('" + Game.selected_arch_id + "', '" + button.name + "')")
 	Game.player_default_pokemon = button.name
 	print("Default pokemon: "+ Game.player_default_pokemon)
 
 
 func _on_market_place_pressed():
-	pass # Replace with function body.
+	JavaScriptBridge.eval("window.open('https://embeddables.testnet.andromedaprotocol.io/constantine-3/PokeArch')")
